@@ -24,7 +24,7 @@ export default function CadastroAlunoScreen() {
         dataNasc: dataNasc.toISOString(),
       });
       Alert.alert('Sucesso', 'Aluno cadastrado com sucesso!');
-      // limpa campos
+      
       setNome('');
       setCpf('');
       setEmail('');
