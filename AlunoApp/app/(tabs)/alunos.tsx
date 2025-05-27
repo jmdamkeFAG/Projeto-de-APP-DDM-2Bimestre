@@ -26,6 +26,7 @@ export default function CadastroAlunoScreen() {
       });
       Alert.alert('Sucesso', 'Aluno cadastrado com sucesso!');
      
+      
       setNome('');
       setCpf('');
       setEmail('');
