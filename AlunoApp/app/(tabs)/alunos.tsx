@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, ScrollView, Platform } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { createAluno } from '../../src/services/alunoService';
+import { getAlunos} from '../../src/services/alunoService';
 
 export default function CadastroAlunoScreen() {
   const [nome, setNome] = useState('');
@@ -24,7 +25,7 @@ export default function CadastroAlunoScreen() {
         dataNasc: dataNasc.toISOString(),
       });
       Alert.alert('Sucesso', 'Aluno cadastrado com sucesso!');
-      // limpa campos
+     
       setNome('');
       setCpf('');
       setEmail('');
@@ -87,8 +88,8 @@ export default function CadastroAlunoScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flexGrow: 1, padding: 16, backgroundColor: '#fff' },
-  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 20, textAlign: 'center' },
+  container: { flexGrow: 1, padding: 16, backgroundColor: 'white' },
+  title: { fontSize: 22, fontWeight: 'bold', borderTopWidth: 32, marginBottom: 20, textAlign: 'center', borderTopColor: "white"  },
   input: {
     borderWidth: 1,
     borderColor: '#ccc',

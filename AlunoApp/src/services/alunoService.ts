@@ -14,7 +14,7 @@ export async function getAlunos(): Promise<Aluno[]> {
   return response.json();
 }
 
-export async function getAluno(id: string): Promise<Aluno> {
+export async function getAlunoById(id: string): Promise<Aluno> {
   const response = await fetch(`${API_URL}/alunos/${id}`);
   if (!response.ok) throw new Error('Erro ao buscar aluno');
   return response.json();
